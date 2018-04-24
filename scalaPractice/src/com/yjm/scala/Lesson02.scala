@@ -3,6 +3,7 @@ package com.yjm.scala
 import java.util.Date
 
 object Lesson02{
+  
 	def main(args: Array[String]) {
 		val age =20
 		if(age < 18){
@@ -13,6 +14,7 @@ object Lesson02{
 		  println("尽情享受")
 		}
 	}
+	
 	//九九表
 	for(i <-1 to 9 ;j<- 1 until 10){
 	  if(i>=j){
@@ -28,13 +30,13 @@ object Lesson02{
 	for(temp <- list){
 	  println(temp)
 	}
+	
 	//可变参数长度的函数
 	def fun3(elems:Int*){
 	  for(elem<-elems){
 	    println(elem)
 	  }
 	}
-	
 	fun3(1,2,3,4,5,6)
 	
 	//最后一行有可能作为返回结果，所以需要加上返回值类型
@@ -52,6 +54,7 @@ object Lesson02{
 	  println(name + facePower)
 	}
 	fun5("hello",99.00)
+	
 	//无参匿名函数
 	val fun51 = ()=>{
 	  println("hello scala")
@@ -77,10 +80,8 @@ object Lesson02{
 	def fun6(f:(Int,Int) => Int):Int={
 	  f(100,200)
 	}
-	
 	def f(a:Int,b:Int)={
 	  a+b
 	}
 	println(fun6(f))	
-	
 }
